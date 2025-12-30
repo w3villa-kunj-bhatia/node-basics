@@ -1,2 +1,3 @@
-1767088868291: / New request received
-1767088899274: /about New request received
+1767095015614: GET / New request received
+1767095049310: GET /about New request received
+1767095053644: GET /about New request received
