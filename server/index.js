@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const url = require("url");
 
-const myServer = http.createServer((req, res) => {
+function myHandler(req, res) {
   if (req.url === "/favicon.ico") {
     return res.end();
   }
@@ -32,7 +32,9 @@ const myServer = http.createServer((req, res) => {
         res.end("404 Page Not Found");
     }
   });
-});
+}
+
+const myServer = http.createServer(myHandler);
 
 myServer.listen(5000, () => {
   console.log("Server is listening on port 5000");
