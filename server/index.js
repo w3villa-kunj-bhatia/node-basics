@@ -1,4 +1,4 @@
-const http = require("http");
+// const http = require("http");
 // const fs = require("fs");
 // const url = require("url");
 const express = require("express");
@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  return res.send(`Hello ${req.query.name}` );
+  return res.send(`Hello ${req.query.name}`);
 });
 
 // function myHandler(req, res) {
@@ -45,8 +45,12 @@ app.get("/about", (req, res) => {
 //   });
 // }
 
-const myServer = http.createServer(app);
+// const myServer = http.createServer(app);
 
-myServer.listen(5000, () => {
-  console.log("Server is listening on port 5000");
+app.listen(5000, () => { 
+  console.log("Server started on port 5000");
 });
+
+// myServer.listen(5000, () => {
+//   console.log("Server is listening on port 5000");
+// });
